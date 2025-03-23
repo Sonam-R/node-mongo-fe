@@ -6,8 +6,9 @@ import { useNavigate } from "react-router";
 import { BASE_URL } from "../utils/constant";
 
 const Login = () => {
-  const [emailId, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [emailId, setEmail] = useState("virat+5@gmail.com");
+  const [password, setPassword] = useState("Virat@1234");
+  const [error, setError] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const handleLogin = async() => {
@@ -15,11 +16,13 @@ const Login = () => {
       const response = await axios.post(
         BASE_URL + "/login", {
         emailId,
-        password
+        password,
+        withCredentials: true
       })
       dispatch(addUser(response.data));
-      return navigate("/profile");
+      return navigate("/profile");  
     } catch(err){
+      setError(err?.response?.message)
       console.log(err);
     }
   }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './index.css'
-import Body from './Body';
+import Body from './components/Body';
 import { BrowserRouter, Routes, Route } from "react-router";
 import Login from './components/Login';
 import Profile from './components/Profile';
