@@ -1,7 +1,6 @@
 import React from "react";
 
 const Usercard = ({userData}) => {
-  console.log(userData, "userData");
   return (
     <>
       {userData &&

@@ -6,6 +6,7 @@ import Body from './components/Body';
 import { BrowserRouter, Routes, Route } from "react-router";
 import Login from './components/Login';
 import Profile from './components/Profile';
+import ProfileEdit from './components/ProfileEdit';
 import { Provider } from 'react-redux';
 import appStore from './utils/appStore';
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/" element={<Body />} >
             <Route exact path="/login" element={<Login />} />
             <Route exact path="/profile" element={<Profile />} />
+            <Route exact path="/profile/edit" element={<ProfileEdit />} />
           </Route>
         </Routes>
     

@@ -47,6 +47,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li><a onClick={handleLogout}>Logout</a></li>
+          <li><Link to="/profile/edit" className="justify-between">Edit Profile</Link></li>
         </ul>
       </div>
     </div>
